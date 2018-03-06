@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # split by whitespace; print the 1st and 5th column
 echo "
