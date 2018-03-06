@@ -12,7 +12,7 @@ END   { print "END" }
 
 
 # print the timestamp and the owner of each file
-ls -l /tmp | awk '
+ls -l /usr/bin | awk '
 BEGIN { print "START" }
       { print $8, "\t", $3 }
 END   { print "END" }
