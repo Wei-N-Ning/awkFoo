@@ -1,0 +1,5 @@
+ 17:30:24 up 51 days, 20:12,  3 users,  load average: 2.18, 1.44, 1.61
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+wning    pts/0    :3340            15Jan18 51days 53:56   0.01s -csh
+wning    pts/1    :3340            15Jan18 12:24   1.80s  1.80s -bin/tcsh
+wning    pts/2    :3340            19Feb18  0.00s  0.94s  0.05s -bin/tcsh
