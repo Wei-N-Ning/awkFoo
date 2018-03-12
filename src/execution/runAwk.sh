@@ -18,8 +18,9 @@ doom2 1994 dos
     assertCommandDone
 }
 
+# prints three times /tmp/_1 and /tmp/_2
 function runAwkWithInputFiles() {
-    awk '' /tmp/_1 /tmp/_2
+    awk '{ print FILENAME }' /tmp/_1 /tmp/_2
     assertCommandDone
 }
 
