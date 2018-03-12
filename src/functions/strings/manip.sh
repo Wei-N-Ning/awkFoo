@@ -29,10 +29,75 @@ function stringMatch() {
 '
 }
 
+function stringSplit() {
+    echo "" | awk '
+{
+    print split("doom doom2 doom3", arr, " ")
+    for (idx in arr) {
+        print idx, arr[idx]
+    }
+}
+'
+}
+
+function stringFormat() {
+    echo "" | awk '
+{
+    print sprintf("%.4f", 3.1415926)
+}
+'
+}
+
+function stringToNum() {
+    echo "" | awk '
+{
+    print sprintf("%.2f", strtonum("3.1415926535"))
+}
+'
+}
+
+# sub will process only the leftmost matched text;
+# gsub will process all the matched texts;
+# recall these two functions in Lua
+# gensub is a generator, not a modifier;
+function stringSub() {
+    echo "" | awk '
+{
+    sut = "doom doom2 doom3 doom2016"
+    print gsub(/[0-9]{1,}/, "AAA", sut)
+    print gensub(/AAA/, "BBB", "g", sut)
+    print sut
+}
+'
+}
+
+function stringSubString() {
+    echo "" | awk '
+{
+    print substr("doom 1992", 4, 4)
+}
+'
+}
+
+function stringChangeCases() {
+    echo "" | awk '
+{
+    print tolower("Iddqd")
+    print toupper("idkfa")
+}
+'
+}
+
 function run() {
     stringIndex
     stringLength
     stringMatch
+    stringSplit
+    stringFormat
+    stringToNum
+    stringSub
+    stringSubString
+    stringChangeCases
 }
 
 run
