@@ -1,0 +1,4 @@
+function doFoo() {
+    print "foo"
+}
+
