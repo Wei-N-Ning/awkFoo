@@ -6,10 +6,14 @@
 # sort of follows it too)
 function run() {
     echo "" | awk '
-function demo() {
+function demoVariableName() {
     _privateVar=10
     _privateVar=Globals["counter"]
     Globals["counter"] = 33
+}
+function strProcess() {
+}
+function lib_strProcess() {
 }
 BEGIN {
     SomeGlobalVar=3 
@@ -17,7 +21,9 @@ BEGIN {
     Globals["CurrentUser"]="wein"
 }
 {
-    demo()
+    demoVariableName()
+    strProcess()
+    lib_strProcess()
 }
 '
 }
