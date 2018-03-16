@@ -6,7 +6,7 @@ function run() {
     echo "" | awk '
 BEGIN {
     NetService = "/inet/tcp/0/localhost/cfinger"
-    print "" |& NetService
+    print "wning" |& NetService
     while ((NetService |& getline) > 0) {
         print $0
     }
