@@ -78,15 +78,29 @@
 - preAnalyzeLineCount
 
 
+[network/readHttp.sh](src/network/readHttp.sh)
+
+
+
 [network/sender.sh](src/network/sender.sh)
 
 
 
-[network/fingerService.sh](src/network/fingerService.sh)
+[network/pingFingerService.sh](src/network/pingFingerService.sh)
 
 
 
-[network/sendReceive.sh](src/network/sendReceive.sh)
+[network/demoServerLaunch.sh](src/network/demoServerLaunch.sh)
+
+- launchSrv
+- pingSrv
+
+
+[network/demoSendReceive.sh](src/network/demoSendReceive.sh)
+
+
+
+[network/daytimeService.sh](src/network/daytimeService.sh)
 
 
 
