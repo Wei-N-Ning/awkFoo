@@ -22,9 +22,17 @@ END { print sum }
 ' $data
 }
 
+function countRowsByRegexAndFieldCount() {
+    local data=$( testFilePath "ls_out.txt" )
+    awk '
+NF > 3 && /F/ { print $1 }
+' $data
+}
+
 function run() {
     countRows
     countRowsByRegex
+    countRowsByRegexAndFieldCount
 }
 
 run
