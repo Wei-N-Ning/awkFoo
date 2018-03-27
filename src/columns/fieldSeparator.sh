@@ -8,8 +8,9 @@ function assertEqual() {
     fi
 }
 
+# use -F to specify multiple field separator
 function overrideFieldSeparator() {
-    local _numFields=$( echo "title,year,make,size" | awk 'BEGIN { FS = "," } { print NF }' )
+    local _numFields=$( echo "title,year make&size" | awk -F'[,& ]' '{ print NF }' )
     assertEqual 4 $_numFields
 }
 
