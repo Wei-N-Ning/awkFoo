@@ -71,6 +71,24 @@ function stringSub() {
 '
 }
 
+# this also DESTROYS the Python indentation
+function removeLeadingNumber() {
+    echo "
+   51 # Do some modification to the TimeWarp
+   52 if lTimeWarp.FCurve:
+   53     lFCurve = lTimeWarp.FCurve
+" | awk '{ print gensub(/^[0-9 ]{2,}/, "", "g", $0) }'
+}
+
+# this preserve the Python indentation
+function removeLeadingNumberPreserveInd() {
+    echo "
+   51 # Do some modification to the TimeWarp
+   52 if lTimeWarp.FCurve:
+   53     lFCurve = lTimeWarp.FCurve
+" | awk -F "" '{ print gensub(/^   [0-9]{2,} /, "", "g", $0) }'
+}
+
 function stringSubString() {
     echo "" | awk '
 {
@@ -96,6 +114,8 @@ function run() {
     stringFormat
     stringToNum
     stringSub
+    removeLeadingNumber
+    removeLeadingNumberPreserveInd
     stringSubString
     stringChangeCases
 }
