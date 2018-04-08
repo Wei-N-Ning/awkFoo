@@ -9,7 +9,7 @@ function array() {
     n++
 }
 END {
-    for (i=1; i<n; i++) {
+    for (i=1; i<=n; i++) {
         print arr[i]
     }
 }

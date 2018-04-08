@@ -1,0 +1,9 @@
+/doom1/map/e1/m1
+/doom1/map/e1/m1
+/doom1/map/e1/m1
+/doom1/map/e1/m1
+/doom1/map/e2/m4
+/doom1/map/e1/m1
+/doom1/map/e1/m1
+/doom1/map/e1/m1
+/doom2/map/e32
