@@ -9,6 +9,13 @@ function stringIndex() {
 '
 }
 
+# match() returns 0 (no-match) or N (position of seq) 
+function stringStartswith() {
+    echo "" | awk '
+{ print "doomlib: ", match("-Ldoomlib", "^\\-") }
+'
+}
+
 # returns 4
 function stringLength() {
     echo "" | awk '
@@ -108,6 +115,7 @@ function stringChangeCases() {
 
 function run() {
     stringIndex
+    stringStartswith
     stringLength
     stringMatch
     stringSplit
