@@ -1,5 +1,24 @@
 
 
+[commands/substitutions.sh](src/commands/substitutions.sh)
+
+
+
+[commands/common.sh](src/commands/common.sh)
+
+- buildSUT
+- printTill
+- processEveryNthLine
+
+
+[basics/inline.sh](src/basics/inline.sh)
+
+- buildSUT
+- oneWord
+- printNLines
+- multipleCommands
+
+
 [variables/passShellVariablesToAwk.sh](src/variables/passShellVariablesToAwk.sh)
 
 
@@ -23,12 +42,6 @@
 - maxLineLength
 
 
-[rows/countRowsByColumnValue.sh](src/rows/countRowsByColumnValue.sh)
-
-- countRows
-- countRowsByRegex
-
-
 [rows/recordSplitterSimple.sh](src/rows/recordSplitterSimple.sh)
 
 - overrideRecordSplitter
@@ -43,6 +56,13 @@
 
 [rows/one.sh](src/rows/one.sh)
 
+
+
+[rows/countRowsByPatterns.sh](src/rows/countRowsByPatterns.sh)
+
+- countRows
+- countRowsByRegex
+- countRowsByRegexAndFieldCount
 
 
 [rows/recordSplitterRegex.sh](src/rows/recordSplitterRegex.sh)
@@ -145,15 +165,26 @@
 
 [functions/strings](src/functions/strings)
 
+
+
+[functions/strings](src/functions/strings)
+
 - stringIndex
+- stringStartswith
 - stringLength
 - stringMatch
 - stringSplit
 - stringFormat
 - stringToNum
 - stringSub
+- removeLeadingNumber
+- removeLeadingNumberPreserveInd
 - stringSubString
 - stringChangeCases
+
+
+[functions/strings](src/functions/strings)
+
 
 
 [functions/strings](src/functions/strings)
@@ -189,10 +220,16 @@
 [containers/arraySorting.sh](src/containers/arraySorting.sh)
 
 - doSortAndGenerateAutoIndices
+- doSortAndCollectUniqueElements
 
 
 [testWriting/assertions.sh](src/testWriting/assertions.sh)
 
+
+
+[columns/rangeOfColumns.sh](src/columns/rangeOfColumns.sh)
+
+- setUnwantedColumnsEmpty
 
 
 [columns/fieldWidth.sh](src/columns/fieldWidth.sh)
@@ -237,6 +274,10 @@
 [inputFiles/multipleInputFiles.sh](src/inputFiles/multipleInputFiles.sh)
 
 - walk
+
+
+[delimiters/multipleDelimiters.sh](src/delimiters/multipleDelimiters.sh)
+
 
 
 [applications/parseTable.sh](src/applications/parseTable.sh)
